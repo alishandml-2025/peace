@@ -253,7 +253,7 @@ function closeGalleryModal() {
 }
 
 // Theme controls for gallery modal
-function setModalTheme(theme) {
+function setModalTheme(theme, evt) {
     var body = document.getElementById('modalBody');
     if (!body) return;
     body.className = 'gallery-modal-body';
@@ -265,7 +265,8 @@ function setModalTheme(theme) {
     for (var i = 0; i < btns.length; i++) {
         btns[i].classList.remove('active-theme');
     }
-    if (event && event.target) event.target.classList.add('active-theme');
+    var clickedBtn = evt && evt.target ? evt.target : null;
+    if (clickedBtn) clickedBtn.classList.add('active-theme');
 }
 
 // =============================================
