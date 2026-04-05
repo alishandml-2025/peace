@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDG 16 – Peace, Justice & Strong Institutions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ========================================
+         SPLASH SCREEN
+    ======================================== -->
+    <div id="splash-screen" role="dialog" aria-label="Splash screen introduction">
+        <!-- Background Video -->
+        <video class="splash-video" autoplay loop muted playsinline aria-hidden="true">
+            <source src="images/birdanimation.mp4" type="video/mp4">
+        </video>
+
+        <!-- Dark Overlay -->
+        <div class="splash-overlay"></div>
+
+        <!-- Floating Particles -->
+        <div class="splash-particles" id="splash-particles"></div>
+
+        <!-- Foreground Content -->
+        <div class="splash-content">
+            <h1 class="splash-title">Welcome to Our SDG 16 Website</h1>
+            <p class="splash-subtitle">Peace, Justice &amp; Strong Institutions</p>
+            <p class="splash-members">Team Members: Student 1 &bull; Student 2 &bull; Student 3 &bull; Student 4</p>
+            <div class="splash-countdown">
+                Entering site in <span id="countdown-number">5</span>
+            </div>
+            <div class="splash-loader" aria-label="Loading animation"></div>
+            <button class="splash-skip" id="skip-btn" onclick="skipSplash()" aria-label="Skip intro and enter website">Skip Intro</button>
+        </div>
+    </div>
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a class="nav-logo" href="index.html" aria-label="Go to Home page">
+            <div class="nav-logo-icon" aria-hidden="true">16</div>
+            <span class="nav-logo-text">SDG 16</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active" data-page="home">Home</a></li>
+            <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+            <li><a href="simulator.html" data-page="ais">Impact Simulator</a></li>
+            <li><a href="feedback.html" data-page="feedback">Feedback</a></li>
+            <li><a href="team.html" data-page="team">Team</a></li>
+            <li><a href="profile.html" data-page="profile">Profile</a></li>
+            <li><a href="sitemap.html" data-page="sitemap">Sitemap</a></li>
+            <li><a href="content.html" data-page="content">Content</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ========================================
+         HOME PAGE
+    ======================================== -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-shapes">
+                <div class="hero-shape"></div>
+                <div class="hero-shape"></div>
+                <div class="hero-shape"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    United Nations SDG 16
+                </div>
+                <h1 class="hero-title">
+                    Building <span class="highlight">Peace</span>, Justice &amp; Strong <span class="highlight">Institutions</span>
+                </h1>
+                <p class="hero-description">
+                    Promoting peaceful and inclusive societies, providing access to justice for all,
+                    and building effective, accountable and inclusive institutions at all levels.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('mission').scrollIntoView({behavior:'smooth'})">
+                        Explore Our Mission
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <a href="simulator.html" class="btn-secondary">
+                        Take Action
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" id="scroll-indicator" onclick="document.getElementById('mission').scrollIntoView({behavior:'smooth'})">
+                <div class="scroll-dot"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- Mission Section (3 Cards) -->
+        <section id="mission" class="section">
+            <div class="section-header">
+                <span class="section-label reveal">Our Mission</span>
+                <h2 class="section-title reveal reveal-delay-1">Why SDG 16 Matters Today</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Peace, justice, and strong institutions are the foundations upon which all other sustainable development goals are built.
+                </p>
+            </div>
+            <div class="cards-grid">
+                <!-- Card 1: Reduce Violence -->
+                <article class="card reveal reveal-delay-1">
+                    <div class="card-icon" aria-hidden="true">&#9760;</div>
+                    <h3 class="card-title">Reduce Violence</h3>
+                    <p class="card-text">Significantly reduce all forms of violence and related death rates everywhere. Address conflict, insecurity, weak institutions, and limited access to justice.</p>
+                    <ul class="card-list">
+                        <li>Participate in community mediation and dialogue programmes</li>
+                        <li>Volunteer with organisations that prevent youth violence</li>
+                        <li>Promote non-violent conflict resolution in schools and workplaces</li>
+                    </ul>
+                </article>
+
+                <!-- Card 2: Access to Justice -->
+                <article class="card reveal reveal-delay-2">
+                    <div class="card-icon" aria-hidden="true">&#9878;</div>
+                    <h3 class="card-title">Access to Justice</h3>
+                    <p class="card-text">Promote the rule of law and ensure equal access to justice for all. Build inclusive and effective legal systems accessible to every member of society.</p>
+                    <ul class="card-list">
+                        <li>Support legal aid clinics and pro-bono advocacy</li>
+                        <li>Educate peers about their fundamental legal rights</li>
+                        <li>Advocate for transparent and accessible court proceedings</li>
+                    </ul>
+                </article>
+
+                <!-- Card 3: Accountable Institutions -->
+                <article class="card reveal reveal-delay-3">
+                    <div class="card-icon" aria-hidden="true">&#9881;</div>
+                    <h3 class="card-title">Accountable Institutions</h3>
+                    <p class="card-text">Develop effective, accountable and transparent institutions at all levels. Ensure responsive, inclusive, participatory and representative decision-making.</p>
+                    <ul class="card-list">
+                        <li>Engage with local governance, student unions, and civic groups</li>
+                        <li>Report corruption and demand institutional transparency</li>
+                        <li>Support policies that protect human rights and democratic values</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <div class="stats-banner">
+            <div class="stat-item">
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Billion people lack access to justice</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="195">0</div>
+                <div class="stat-label">Countries committed to SDG 16</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="12">0</div>
+                <div class="stat-label">Specific targets for peace &amp; justice</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="2030">0</div>
+                <div class="stat-label">Target year for achieving SDGs</div>
+            </div>
+        </div>
+
+        <!-- Content Gallery Tiles -->
+        <section class="gallery-section-home" id="explore">
+            <div class="section-header">
+                <span class="section-label reveal">Explore</span>
+                <h2 class="section-title reveal reveal-delay-1">Dive Into Our Content</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Explore our interactive tools, gallery, team information, and educational content about SDG 16.
+                </p>
+            </div>
+            <div class="gallery-tiles">
+                <a href="gallery.html" class="gallery-tile reveal">
+                    <img src="images/gallery.png" alt="Gallery page preview showing images of peace and justice">
+                    <div class="gallery-tile-overlay">
+                        <h3>Gallery</h3>
+                        <p>Explore powerful images</p>
+                    </div>
+                </a>
+                <a href="simulator.html" class="gallery-tile reveal reveal-delay-1">
+                    <img src="images/simulator.png" alt="Action Impact Simulator tool preview">
+                    <div class="gallery-tile-overlay">
+                        <h3>Impact Simulator</h3>
+                        <p>Measure your impact</p>
+                    </div>
+                </a>
+                <a href="feedback.html" class="gallery-tile reveal reveal-delay-2">
+                    <img src="images/feedback.png" alt="Feedback and programme directory page preview">
+                    <div class="gallery-tile-overlay">
+                        <h3>Feedback</h3>
+                        <p>Share your thoughts</p>
+                    </div>
+                </a>
+                <a href="team.html" class="gallery-tile reveal reveal-delay-3">
+                    <img src="images/team.png" alt="Meet the team page preview">
+                    <div class="gallery-tile-overlay">
+                        <h3>Meet the Team</h3>
+                        <p>The people behind this site</p>
+                    </div>
+                </a>
+                <a href="profile.html" class="gallery-tile reveal">
+                    <img src="images/profile.png" alt="Student profile page preview">
+                    <div class="gallery-tile-overlay">
+                        <h3>Profile</h3>
+                        <p>Student contributions</p>
+                    </div>
+                </a>
+                <a href="content.html" class="gallery-tile reveal reveal-delay-1">
+                    <img src="images/explore.png" alt="Explore more content about SDG 16">
+                    <div class="gallery-tile-overlay">
+                        <h3>Explore More</h3>
+                        <p>Learn about SDG 16</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Make a Difference?</h2>
+                <p class="cta-subtitle">Try our Action Impact Simulator to see how your daily choices contribute to SDG 16.</p>
+                <a href="simulator.html" class="cta-btn">
+                    Try the Simulator
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Go to Top Button -->
+    <button class="go-top-btn" id="goTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top of page">&#8593;</button>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-name">SDG 16 — Peace, Justice &amp; Strong Institutions</div>
+                <p class="footer-brand-desc">
+                    A coursework website by students of the University of Westminster, dedicated to promoting
+                    awareness and action towards Sustainable Development Goal 16.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="simulator.html">Impact Simulator</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Team</h4>
+                <ul class="footer-links">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></li>
+                    <li><a href="validation_ST2.html" target="_blank">Validation</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener">UN SDG 16</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-bottom-text">&copy; 2026 SDG 16 Coursework — University of Westminster. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

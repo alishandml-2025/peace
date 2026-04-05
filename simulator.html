@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDG 16 – Action Impact Simulator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a class="nav-logo" href="index.html" aria-label="Go to Home page">
+            <div class="nav-logo-icon" aria-hidden="true">16</div>
+            <span class="nav-logo-text">SDG 16</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+            <li><a href="simulator.html" class="active" data-page="ais">Impact Simulator</a></li>
+            <li><a href="feedback.html" data-page="feedback">Feedback</a></li>
+            <li><a href="team.html" data-page="team">Team</a></li>
+            <li><a href="profile.html" data-page="profile">Profile</a></li>
+            <li><a href="sitemap.html" data-page="sitemap">Sitemap</a></li>
+            <li><a href="content.html" data-page="content">Content</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ========================================
+         ACTION IMPACT SIMULATOR PAGE
+    ======================================== -->
+    <main>
+        <div class="ais-header" id="aisHeader">
+            <h1>Action Impact Simulator</h1>
+            <p>Select actions you commit to taking and see how your choices contribute to SDG 16.</p>
+        </div>
+
+        <!-- Score section -->
+        <div class="ais-score-section" id="aisScoreSection">
+            <div class="ais-score-bar-container">
+                <div class="ais-score-label">Your Impact Score</div>
+                <div class="ais-score-bar">
+                    <div class="ais-score-fill" id="aisScoreFill"></div>
+                </div>
+                <div class="ais-score-text">
+                    <strong id="aisScoreNum">0</strong> / 25 points
+                </div>
+                <div class="ais-feedback-msg" id="aisFeedback" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Action Cards -->
+        <div class="ais-cards-grid" id="aisCardsGrid">
+            <!-- Card 1 -->
+            <div class="ais-card" data-points="4" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=350&fit=crop" alt="Volunteers helping in a community garden programme">
+                <div class="ais-card-body">
+                    <h3>Volunteer in Community Programmes</h3>
+                    <p>Dedicate time to local community projects such as neighbourhood clean-ups, mentorship, or youth outreach that build social cohesion and trust.</p>
+                    <span class="ais-points-badge">+4 Impact Points</span>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="ais-card" data-points="3" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=600&h=350&fit=crop" alt="People having a calm conversation to resolve differences peacefully">
+                <div class="ais-card-body">
+                    <h3>Promote Peaceful Communication</h3>
+                    <p>Practice and encourage non-violent communication methods in daily interactions, fostering understanding and reducing interpersonal conflict.</p>
+                    <span class="ais-points-badge">+3 Impact Points</span>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="ais-card" data-points="5" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=350&fit=crop" alt="Transparent reporting and oversight documents promoting accountability">
+                <div class="ais-card-body">
+                    <h3>Support Transparency &amp; Accountability</h3>
+                    <p>Advocate for open data, participate in public consultations, and support organisations working to expose corruption and promote ethical governance.</p>
+                    <span class="ais-points-badge">+5 Impact Points</span>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="ais-card" data-points="4" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=350&fit=crop" alt="Young people participating in a civic engagement workshop">
+                <div class="ais-card-body">
+                    <h3>Engage in Civic Participation</h3>
+                    <p>Vote, attend council meetings, join student unions, and participate in democratic processes that strengthen institutional accountability.</p>
+                    <span class="ais-points-badge">+4 Impact Points</span>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="ais-card" data-points="5" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&h=350&fit=crop" alt="Students educating peers about human rights awareness">
+                <div class="ais-card-body">
+                    <h3>Educate Others on Human Rights</h3>
+                    <p>Share knowledge about fundamental rights, organise awareness campaigns, and help others understand legal protections available to them.</p>
+                    <span class="ais-points-badge">+5 Impact Points</span>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="ais-card" data-points="4" onclick="toggleAisCard(this)">
+                <img class="ais-card-img" src="https://images.unsplash.com/photo-1591848478625-de43268e6fb8?w=600&h=350&fit=crop" alt="People marching for justice holding banners about equality and rule of law">
+                <div class="ais-card-body">
+                    <h3>Advocate for Rule of Law</h3>
+                    <p>Support legal reform campaigns, stand up against injustice in your community, and promote the principle that laws must apply equally to everyone.</p>
+                    <span class="ais-points-badge">+4 Impact Points</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Go to Top Button -->
+    <button class="go-top-btn" id="goTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top of page">&#8593;</button>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-name">SDG 16 — Peace, Justice &amp; Strong Institutions</div>
+                <p class="footer-brand-desc">
+                    A coursework website by students of the University of Westminster, dedicated to promoting
+                    awareness and action towards Sustainable Development Goal 16.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="simulator.html">Impact Simulator</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Team</h4>
+                <ul class="footer-links">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></li>
+                    <li><a href="validation_ST2.html" target="_blank">Validation</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener">UN SDG 16</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-bottom-text">&copy; 2026 SDG 16 Coursework — University of Westminster. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
