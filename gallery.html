@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDG 16 – Gallery</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a class="nav-logo" href="index.html" aria-label="Go to Home page">
+            <div class="nav-logo-icon" aria-hidden="true">16</div>
+            <span class="nav-logo-text">SDG 16</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="gallery.html" class="active" data-page="gallery">Gallery</a></li>
+            <li><a href="simulator.html" data-page="ais">Impact Simulator</a></li>
+            <li><a href="feedback.html" data-page="feedback">Feedback</a></li>
+            <li><a href="team.html" data-page="team">Team</a></li>
+            <li><a href="profile.html" data-page="profile">Profile</a></li>
+            <li><a href="sitemap.html" data-page="sitemap">Sitemap</a></li>
+            <li><a href="content.html" data-page="content">Content</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ========================================
+         GALLERY PAGE
+    ======================================== -->
+    <main>
+        <div class="gallery-page-header">
+            <h1>Image Gallery</h1>
+            <p>Explore powerful images related to peace, justice, and strong institutions worldwide.</p>
+        </div>
+
+        <div class="gallery-img-grid" id="galleryGrid">
+            <div class="gallery-img-item" onclick="openGalleryModal(0)" tabindex="0" aria-label="View image: Peaceful Protest">
+                <img src="https://images.unsplash.com/photo-1591848478625-de43268e6fb8?w=600&h=450&fit=crop" alt="People holding signs at a peaceful protest for justice and equality">
+                <div class="gallery-img-label">Peaceful Protest</div>
+            </div>
+            <div class="gallery-img-item" onclick="openGalleryModal(1)" tabindex="0" aria-label="View image: Justice System">
+                <img src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?w=600&h=450&fit=crop" alt="Balanced scales of justice in a courtroom setting">
+                <div class="gallery-img-label">Justice System</div>
+            </div>
+            <div class="gallery-img-item" onclick="openGalleryModal(2)" tabindex="0" aria-label="View image: Community Dialogue">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=450&fit=crop" alt="Diverse group of people engaged in community dialogue">
+                <div class="gallery-img-label">Community Dialogue</div>
+            </div>
+            <div class="gallery-img-item" onclick="openGalleryModal(3)" tabindex="0" aria-label="View image: Strong Institutions">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop" alt="Modern government institution building at sunset">
+                <div class="gallery-img-label">Strong Institutions</div>
+            </div>
+            <div class="gallery-img-item" onclick="openGalleryModal(4)" tabindex="0" aria-label="View image: Youth Empowerment">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=450&fit=crop" alt="Young people gathered at a meeting discussing civic engagement">
+                <div class="gallery-img-label">Youth Empowerment</div>
+            </div>
+            <div class="gallery-img-item" onclick="openGalleryModal(5)" tabindex="0" aria-label="View image: Global Partnership">
+                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&h=450&fit=crop" alt="Hands from different ethnicities joined together symbolising global partnership">
+                <div class="gallery-img-label">Global Partnership</div>
+            </div>
+        </div>
+
+        <!-- Gallery Modal -->
+        <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Gallery image detail view">
+            <div class="gallery-modal-content">
+                <button class="gallery-modal-close" onclick="closeGalleryModal()" aria-label="Close modal">&times;</button>
+                <img id="modalImg" src="" alt="Gallery detail image">
+                <div class="gallery-modal-body" id="modalBody">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <div class="theme-controls">
+                        <span style="font-size:0.82rem;font-weight:600;color:#94a3b8;align-self:center;">Theme:</span>
+                        <button class="theme-btn active-theme" onclick="setModalTheme('light')">Light</button>
+                        <button class="theme-btn" onclick="setModalTheme('dark')">Dark</button>
+                        <button class="theme-btn" onclick="setModalTheme('sepia')">Sepia</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Go to Top Button -->
+    <button class="go-top-btn" id="goTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top of page">&#8593;</button>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-name">SDG 16 — Peace, Justice &amp; Strong Institutions</div>
+                <p class="footer-brand-desc">
+                    A coursework website by students of the University of Westminster, dedicated to promoting
+                    awareness and action towards Sustainable Development Goal 16.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="simulator.html">Impact Simulator</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Team</h4>
+                <ul class="footer-links">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></li>
+                    <li><a href="validation_ST2.html" target="_blank">Validation</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener">UN SDG 16</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-bottom-text">&copy; 2026 SDG 16 Coursework — University of Westminster. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

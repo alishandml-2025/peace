@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDG 16 – Feedback & Programme Directory</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a class="nav-logo" href="index.html" aria-label="Go to Home page">
+            <div class="nav-logo-icon" aria-hidden="true">16</div>
+            <span class="nav-logo-text">SDG 16</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+            <li><a href="simulator.html" data-page="ais">Impact Simulator</a></li>
+            <li><a href="feedback.html" class="active" data-page="feedback">Feedback</a></li>
+            <li><a href="team.html" data-page="team">Team</a></li>
+            <li><a href="profile.html" data-page="profile">Profile</a></li>
+            <li><a href="sitemap.html" data-page="sitemap">Sitemap</a></li>
+            <li><a href="content.html" data-page="content">Content</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ========================================
+         FEEDBACK PAGE
+    ======================================== -->
+    <main>
+        <div class="feedback-header">
+            <h1>Feedback &amp; Programme Directory</h1>
+            <p>Explore SDG 16 initiatives and share your feedback to help us improve.</p>
+        </div>
+
+        <!-- Programme Directory -->
+        <div class="programs-section">
+            <div class="section-header">
+                <span class="section-label">Programmes</span>
+                <h2 class="section-title">SDG 16 Initiatives</h2>
+                <div style="margin-top:16px;">
+                    <label for="sortPrograms" style="font-size:0.85rem;color:#5a6a7a;margin-right:8px;">Sort by:</label>
+                    <select id="sortPrograms" style="padding:8px 16px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.85rem;color:#3a4a5c;cursor:pointer;">
+                        <option>Most Popular</option>
+                        <option>Student-Friendly</option>
+                        <option>Newest</option>
+                        <option>Nearest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="programs-scroll">
+                <div class="program-card">
+                    <div class="program-icon" style="background:#e0f2fe;">&#9878;</div>
+                    <h3>Youth Justice League</h3>
+                    <p>A student-led initiative providing free legal literacy workshops to underserved communities across London.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon" style="background:#fef3c7;">&#9774;</div>
+                    <h3>Peace Ambassadors Network</h3>
+                    <p>Training young peacebuilders to mediate conflicts in schools, universities, and local neighbourhoods.</p>
+                    <button class="program-btn">Get Involved</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon" style="background:#d1fae5;">&#9881;</div>
+                    <h3>Transparency Watch</h3>
+                    <p>A grassroots campaign that monitors public spending, promotes open data, and holds institutions accountable.</p>
+                    <button class="program-btn">Join</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon" style="background:#ede9fe;">&#9733;</div>
+                    <h3>Civic Voices Forum</h3>
+                    <p>A platform enabling students and citizens to engage directly with local council decisions and policy proposals.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <div class="reviews-summary">
+                <div class="reviews-score">8.6<span style="font-size:1.2rem;color:#94a3b8;">/10</span></div>
+                <div class="reviews-label">Excellent &bull; Based on 142 reviews</div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4>Truly Inspiring Initiative</h4>
+                    <p>The Youth Justice League workshop changed my perspective on how accessible legal education can be. Highly recommend for all students. <a href="#" style="color:#0077b6;">See more</a></p>
+                    <div class="review-meta">
+                        <span>Sarah M. &bull; 15 Feb 2026</span>
+                        <span class="review-rating">9.2</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <h4>Well-Organised &amp; Impactful</h4>
+                    <p>The Peace Ambassadors training gave me practical tools for conflict resolution that I use daily in my community work. <a href="#" style="color:#0077b6;">See more</a></p>
+                    <div class="review-meta">
+                        <span>James K. &bull; 28 Jan 2026</span>
+                        <span class="review-rating">8.8</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <h4>Great for Student Engagement</h4>
+                    <p>Civic Voices Forum helped me understand local governance processes. It felt empowering to have a real voice in policy discussions. <a href="#" style="color:#0077b6;">See more</a></p>
+                    <div class="review-meta">
+                        <span>Amira D. &bull; 10 Mar 2026</span>
+                        <span class="review-rating">8.4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="feedback-form-section">
+            <h2>Submit Your Feedback</h2>
+            <form id="feedbackForm" novalidate onsubmit="return handleFeedbackSubmit(event)">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="form-group">
+                        <label for="fbName">Full Name *</label>
+                        <input type="text" id="fbName" name="fullname" required placeholder="Enter your full name">
+                        <div class="form-error" id="fbNameError">Please enter your full name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbEmail">Email Address *</label>
+                        <input type="email" id="fbEmail" name="email" required placeholder="you@example.com">
+                        <div class="form-error" id="fbEmailError">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbPhone">Telephone Number</label>
+                        <input type="tel" id="fbPhone" name="phone" placeholder="+44 7700 900000">
+                    </div>
+                    <div class="form-group">
+                        <label for="fbAddress">Address</label>
+                        <textarea id="fbAddress" name="address" rows="2" placeholder="Your address"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback Details</legend>
+                    <div class="form-group">
+                        <label for="fbProgramme">Programme *</label>
+                        <select id="fbProgramme" name="programme" required>
+                            <option value="">Select a programme</option>
+                            <option>Youth Justice League</option>
+                            <option>Peace Ambassadors Network</option>
+                            <option>Transparency Watch</option>
+                            <option>Civic Voices Forum</option>
+                        </select>
+                        <div class="form-error" id="fbProgrammeError">Please select a programme.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbTopic">Topic</label>
+                        <input list="topicsList" id="fbTopic" name="topic" placeholder="Search or type a topic">
+                        <datalist id="topicsList">
+                            <option value="Legal Education"></option>
+                            <option value="Conflict Resolution"></option>
+                            <option value="Anti-Corruption"></option>
+                            <option value="Civic Engagement"></option>
+                            <option value="Human Rights"></option>
+                            <option value="Community Building"></option>
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbMessage">Message * <span id="charCounter" class="char-counter">(500 characters remaining)</span></label>
+                        <textarea id="fbMessage" name="message" required maxlength="500" rows="5" placeholder="Write your feedback here..." oninput="updateCharCounter()"></textarea>
+                        <div class="form-error" id="fbMessageError">Please enter your feedback message.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbDate">Date</label>
+                        <input type="date" id="fbDate" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="fbDateTime">Preferred Contact Time</label>
+                        <input type="datetime-local" id="fbDateTime" name="datetime">
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <h3>&#10003; Thank You for Your Feedback!</h3>
+                <p>Your submission has been received. We appreciate your input in helping us improve our SDG 16 initiatives.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Go to Top Button -->
+    <button class="go-top-btn" id="goTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top of page">&#8593;</button>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-name">SDG 16 — Peace, Justice &amp; Strong Institutions</div>
+                <p class="footer-brand-desc">
+                    A coursework website by students of the University of Westminster, dedicated to promoting
+                    awareness and action towards Sustainable Development Goal 16.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="simulator.html">Impact Simulator</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Team</h4>
+                <ul class="footer-links">
+                    <li><a href="team.html">Meet the Team</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></li>
+                    <li><a href="validation_ST2.html" target="_blank">Validation</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener">UN SDG 16</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-bottom-text">&copy; 2026 SDG 16 Coursework — University of Westminster. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
